@@ -1,0 +1,3 @@
+FPSGame:
+Gamemodes: Arena (Similar to Call of Duty / Battlefield), Battle Royale (Similar to Player's Unknown Battlegrounds / Fortnite Battle Royale), Survival (Similar to ARK: Survival Evolved / Minecraft).
+....
