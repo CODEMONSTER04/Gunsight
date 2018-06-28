@@ -34,6 +34,13 @@ void Display::Start()
 {
 
 }
+void Display::RenderNew()
+{
+	for (size_t i = 0; i < meshes.size(); i++)
+	{
+		meshes[i].Draw();
+	}
+}
 void Display::Update()
 {
 	glClearColor(0.0, 0.0, 0.0, 1.0);
@@ -52,9 +59,4 @@ void Display::Update()
 			}
 		}
 	}
-}
-
-void Display::RenderNew()
-{
-
 }

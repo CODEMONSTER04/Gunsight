@@ -1,2 +1,3 @@
-﻿  Display.cpp
+﻿  Material.cpp
+c:\users\gebruiker\source\repos\gunsight\gunsight\material.cpp(66): warning C4244: 'argument': conversion from '::size_t' to 'float', possible loss of data
   Gunsight.vcxproj -> C:\Users\Gebruiker\source\repos\Gunsight\Debug\Gunsight.exe

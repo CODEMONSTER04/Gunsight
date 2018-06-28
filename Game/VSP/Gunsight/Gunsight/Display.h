@@ -4,6 +4,8 @@
 #include <SDL.h>
 #include <glew.h>
 #include <string>
+#include <vector>
+#include "Mesh.h"
 class Display
 {
 public:
@@ -13,6 +15,7 @@ public:
 	void Start();
 	void Update();
 	void RenderNew();
+	std::vector<Mesh> meshes;
 private:
 	SDL_Window * p_wnd;
 	SDL_GLContext p_ctxt;
