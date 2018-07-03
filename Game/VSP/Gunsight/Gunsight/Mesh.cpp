@@ -101,9 +101,9 @@ Mesh* Mesh::LoadMesh(const std::string& fileName)
 }
 void Mesh::Draw()
 {
-	glBindVertexArray(VAO);
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	material.Use();
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBindVertexArray(VAO);
 	glBufferData(GL_ARRAY_BUFFER, verts.size(), &verts.data()[0], GL_DYNAMIC_DRAW);
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, verts.size(), GL_FLOAT, GL_FALSE, 0, 0);

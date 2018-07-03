@@ -15,7 +15,7 @@ public:
 	void Start();
 	void Update();
 	void RenderNew();
-	std::vector<Mesh> meshes;
+	std::vector<Mesh*> meshes;
 private:
 	SDL_Window * p_wnd;
 	SDL_GLContext p_ctxt;

@@ -6,7 +6,6 @@ Shader::Shader(const std::string& fileName)
 	p_program = glCreateProgram();
 	p_shaders[0] = CreateShader(LoadShader(fileName + ".v.gsa"), GL_VERTEX_SHADER);
 	p_shaders[1] = CreateShader(LoadShader(fileName + ".f.gsa"), GL_FRAGMENT_SHADER);
-	p_shaders[2] = CreateShader(LoadShader(fileName + "g.gsa"), GL_GEOMETRY_SHADER);
 	for (unsigned int i = 0; i < NUMBER_OF_SHADERS; i++)
 	{
 		glAttachShader(p_shaders[i], p_program);
@@ -17,7 +16,10 @@ Shader::Shader(const std::string& fileName)
 	CheckShaderError(p_program, GL_VALIDATE_STATUS, true, "Program Invalid: ");
 
 }
-
+void Shader::BindAttribute(GLuint index, const GLchar* name)
+{
+	glBindAttribLocation(p_program, index, name);
+}
 
 Shader::~Shader()
 {

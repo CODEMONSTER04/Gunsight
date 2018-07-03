@@ -1,0 +1,17 @@
+#version 450
+
+layout(location = 1) in vec3 normal;
+layout(location = 2) in vec2 texcoord;
+layout(location = 3) in sampler2D t_diffuse;
+layout(location = 4) in sampler2D t_specular;
+layout(location = 5) in sampler2D t_metallic;
+layout(location = 6) in sampler2D t_normal;
+layout(location = 7) in sampler2D t_opacity;
+layout(location = 8) in sampler2D t_height;
+layout(location = 9) in sampler2D t_emission;
+layout(location = 10) in sampler2D t_ao;
+out vec4 colorOut;
+void main()
+{
+	colorOut = texture(t_diffuse, texcoord);
+}

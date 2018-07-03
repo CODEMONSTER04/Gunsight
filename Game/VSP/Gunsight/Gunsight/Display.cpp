@@ -4,8 +4,6 @@
 
 Display::Display()
 {
-	SDL_Init(SDL_INIT_EVERYTHING);
-	glewInit();
 	p_wnd = SDL_CreateWindow("Gunsight", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1920, 1080, SDL_WINDOW_SHOWN|SDL_WINDOW_OPENGL|SDL_WINDOW_FULLSCREEN);
 	p_ctxt = SDL_GL_CreateContext(p_wnd);
 	SDL_GL_SetAttribute(SDL_GL_RED_SIZE, 16);
@@ -38,7 +36,7 @@ void Display::RenderNew()
 {
 	for (size_t i = 0; i < meshes.size(); i++)
 	{
-		meshes[i].Draw();
+		meshes[i]->Draw();
 	}
 }
 void Display::Update()
